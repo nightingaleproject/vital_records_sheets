@@ -1925,7 +1925,7 @@ year of child's birth, 8888, 9999",,,,,,,,,,,,,
 1490,Birth Infant Death,149,803,2,Number of Cigarettes Smoked in 3 months prior to Pregnancy,CIGPN,"00-98, 99",,,,,,,,,,,,,
 966,Fetal Death,149,534,1,Was a Histological Placental Examination Performed?,HISTOP,"Y = Yes
 N = No
-P = Planned",,BFDR,ObservationHistologicalPlacentalExamPerformed,value,codeable,[HistologicalPlacentalExaminationVS],B,,,,,Observation-histological-placental-exam-performed,
+P = Planned",,BFDR,ObservationHistologicalPlacentalExamPerformed,value,codeable,[PerformedNotPerformedPlannedVS],B,,,,,Observation-histological-placental-exam-performed,
 420,Surveillance,149,3505,30,Informant's Relationship,INFORMRELATE,,i,VRDR,Decedent,contact.type.text ,string (30 characters),-,,,,,,Decedent,
 161,Mortality,149,1533,10,Decedent's Residence - Street designator,STDESIG_R,,,VRDR,Decedent,address.extension[stdesig],string,-,,y,,,,Decedent,
 1331,ITOP,149,1191,1,Reason for Termination -- Contraceptive failure,REASON_CONTRA_FAIL,"Y, N",,not implemented,not implemented,,,,,,,,,not implemented,
