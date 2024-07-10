@@ -167,33 +167,46 @@ For Canadian Provinces:
 6,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,DeathCertificateDocument,identifier.extension[certificateNumber].value,string(6),-,,y,,,
 7,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,
 8,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,DemographicCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,
+9,Mortality,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,IndustryOccupationCodedContentBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,
 432,Mortality Roster,3,23,50,Decedent's Legal Name--Given ,GNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.given , name.use = official",string,See [Note on Decedent Name],,,,,
 275,Surveillance,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,VRDR,SurveillanceBundle,identifier.extension[certificateNumber].value,string(6),-,,y,,,
 467,Natality,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,BFDR,BundleDocumentBirthReport,identifier.extension[birthCertificateNumber].value,string(6),,B,,,,
+467,Natality,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[fileNumber].value,string(6),,B,,,,
+467,Natality,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[fileNumber].value,string(6),,B,,,,
 1185,ITOP,3,7,6,Certificate Number ,FILENO,left 0 filled; 000001-999999,,not implemented,not implemented,,,,,,,,
 820,Fetal Death,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[fetalDeathReportNumber].value,string(6),,B,,,,
+820,Fetal Death,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[filetNumber].value,string(6),,B,,,,
+820,Fetal Death,3,7,6,Certificate Number,FILENO,Left 0 filled; 000001-999999,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[filetNumber].value,string(6),,B,,,,
 1344,Birth Infant Death,3,7,6,Certificate Number,FILENO,left 0 filled; 000001-999999,,,,,,,,,,,
 9,Mortality,4,13,1,Void flag,VOID,"0 =Default; Valid Record
-1 = VOID record",,not implemented,not implemented,,,-,,y,,,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,,y,,,
 276,Surveillance,4,13,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,SurveillanceBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,
 433,Mortality Roster,4,73,50,Decedent's Legal Name--Middle,MIDNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.given , name.use = official (first letter)",string,See [Note on Decedent Name],,,,,
 468,Natality,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,
 1186,ITOP,4,13,1,Void Flag,VOID,"0 = default; valid record
 1 = VOID record",,not implemented,not implemented,,,,,,,,
 821,Fetal Death,4,13,1,Void flag,VOID,"0 = default; valid record
-1 = VOID record",,not implemented,not implemented,,,,-,,,,
+1 = VOID record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record should be voided.,-,,,,
 1345,Birth Infant Death,4,13,1,Void flag,VOID,"0 = default; valid record
 1 = VOID record",,,,,,,,,,,
 10,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DeathCertificateDocument,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,
 11,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,
 12,Mortality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; Blank,,VRDR,DemographicCodedContentBundle,identifier.extension[auxiliaryStateIdentifier1].value,string(12),-,,y,,,
 469,Natality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentBirthReport,identifier.extension[localFileNumber1].value,string(12),,B,,,,
+469,Natality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[localFileNumber1].value,string(12),,B,,,,
+469,Natality,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[localFileNumber1].value,string(12),,B,,,,
 1187,ITOP,5,14,12,Auxiliary State File Number,AUXNO,000000000001-999999999999; blank,,not implemented,not implemented,,,,,,,,
 822,Fetal Death,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[localFileNumber1].value,string(12),,B,,,,
+822,Fetal Death,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[localFileNumber1].value,string(12),,B,,,,
+822,Fetal Death,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[localFileNumber1].value,string(12),,B,,,,
 1346,Birth Infant Death,5,14,12,Auxiliary State file number,AUXNO,000000000001-999999999999; blank,,,,,,,,,,,
 NA,Natality,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentBirthReport,identifier.extension[localFileNumber2].value,string(12),,B,,,,
 NA,Fetal Death,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentFetalDeathReport,identifier.extension[localFileNumber2].value,string(12),,B,,,,
+NA,Natality,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[localFileNumber2].value,string(12),,B,,,,
+NA,Fetal Death,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentDemographicCodedContent,identifier.extension[localFileNumber2].value,string(12),,B,,,,
+NA,Natality,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[localFileNumber2].value,string(12),,B,,,,
+NA,Fetal Death,NA,NA,NA,Auxiliary State file number (2),*NO IJE MAPPING*,000000000001-999999999999; blank,,BFDR,BundleDocumentCodedCauseOfFetalDeath,identifier.extension[localFileNumber2].value,string(12),,B,,,,
 434,Mortality Roster,5,123,50,Decedent's Legal Name--Last,LNAME,Free form alpha literal; left justified,,VRDR,Decedent,"name.family , name.use = official",string,See [Note on Decedent Name],,,,,
 277,Surveillance,5,25,50,Decedent's Legal Name--Given ,GNAME,,,VRDR,Decedent,"name.given , name.use = official",string,-,,y,,,
 13,Mortality,6,26,1,Source flag: paper/electronic,MFILED,"0 = Electronic Mode
@@ -262,7 +275,7 @@ N = Not Yet Determined",,,,,,,,,,,
 F = Female
 U = Unknown",,VRDR,Decedent,extension[NVSS-SexAtDeath] ,codeable,[AdministrativeGenderVS],,y,,,
 18,Mortality,11,138,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,not implemented,not implemented,,,-,,y,,,
+1 = Alias Record",,not implemented,not implemented,,,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,y,,,
 475,Natality,11,38,1,Place Where Birth Occurred (type of place or institution),BPLACE,"1 = Hospital
 2 = Freestanding Birth Center
 3 = Home (Intended)
@@ -851,7 +864,7 @@ U = Unknown",,VRDR,InputRaceAndEthnicity,component[HispanicCuban].valueCoding,co
 1 = Edit Failed, Data Queried and Verified
 2 = Edit Failed, Data Queried, but not Verified",,,,,,,,,,,
 462,Mortality Roster,33,645,1,Alias Record Flag,ALIAS,"0 = Original Record
-1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,,,,,,
+1 = Alias Record",,VRDR,MortalityRosterBundle,meta.extension[aliasStatus].value,boolean,The NCHS Vital Records FHIR Messaging Implementation Guide is used to indicate that a record is an alias.,,,,,
 41,Mortality,34,237,2,Date of Death--Month,DOD_MO,"01-12, 99",,VRDR,DeathDate,value,dateTime,See [PartialDatesAndTimes],,y,,,
 306,Surveillance,34,242,1,Decedent of Hispanic Origin?--Other,DETHNIC4,"N = No, Not other Hispanic
 H = Yes, other Hispanic
@@ -1110,7 +1123,7 @@ C = Not Obtainable",,VRDR,InputRaceAndEthnicity,component[MissingValueReason].va
 1404,Birth Infant Death,63,377,3,Mother's Race Tabulation Variable 2E,MRACE2E,NCHS Appendix E,,,,,,,,,,,
 1245,ITOP,63,619,30,Patient's Race--Second Other Literal,RACE23,literal text or blank,,not implemented,not implemented,,,,,,,,
 71,Mortality,64,436,30,Decedent's Race--Second Other Pacific Islander Literal,RACE21,Literal; Blank ,,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[SecondOtherPacificIslanderLiteral].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent",string,-,,y,,,
-336,Surveillance,64,702,1,Place of Injury (computer generated),INJPL,,,VRDR,PlaceOfInjury,value,codeable,[PlaceOfInjuryVS],,,,,
+336,Surveillance,64,702,1,Place of Injury (computer generated),INJPL,,,VRDR,PlaceOfInjury,value,codeable,"A code from [PlaceOfInjuryVS] is required, an optional code from [PlaceOfInjuryOtherVS] can also be provided when the primary code is Other.",,,,,
 528,Natality,64,380,3,Mother's Race Tabulation Variable 3E,MRACE3E,NCHS Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[ThirdEditedCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityMother",codeable,[ValueSetRaceCodeVitalRecords],N,,,,
 881,Fetal Death,64,380,3,Mother's Race Tabulation Variable 3E,MRACE3E,Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[ThirdEditedCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityMother",codeable,[ValueSetRaceCodeVitalRecords],N,,,,
 1405,Birth Infant Death,64,380,3,Mother's Race Tabulation Variable 3E,MRACE3E,NCHS Appendix E,,,,,,,,,,,
@@ -1253,7 +1266,7 @@ N = No
 U = Unknown",,not implemented,not implemented,"Encounter-maternity.hospitalization.admitSource (Y if present, N if not present)",,,-,,,,
 1262,ITOP,80,726,1,Contraceptive type - Diaphragm,CONTRA_DAI,"Y, N, U",,not implemented,not implemented,,,,,,,,
 87,Mortality,80,565,3,Second Other Pacific Islander Code,RACE21C,Appendix I,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[SecondOtherPacificIslanderCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent",codeable,[ValueSetRaceCodeVitalRecords],,,,,
-897,Fetal Death,80,424,2,Date of First Prenatal Care Visit--Month,DOFP_MO,"01-12, 88, 99",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+897,Fetal Death,80,424,2,Date of First Prenatal Care Visit--Month,DOFP_MO,"01-12, 88, 99",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,
 544,Natality,80,424,1,Father of Hispanic Origin?--Mexican,FETHNIC1,"N = No, Not Mexican
 H = Yes, Mexican
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicMexican].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetYesNoUnknownVitalRecords],B,,,,
@@ -1263,7 +1276,7 @@ U = Unknown",,,,,,,,,,,
 351,Surveillance,80,796,4,Surgery Date--year,SUR_YR,"4 digit year; <=year of death, 9999 or Blank",,VRDR,SurgeryDate,value,dateTime,See [PartialDatesAndTimes],,,,,
 1263,ITOP,81,727,1,Contraceptive type - I.U.D.,CONTRA_IUD,"Y, N, U",,not implemented,not implemented,,,,,,,,
 88,Mortality,81,568,3,First Other Race Code,RACE22C,Appendix I,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[FirstOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent",codeable,[ValueSetRaceCodeVitalRecords],,,,,
-898,Fetal Death,81,426,2,Date of First Prenatal Care Visit--Day,DOFP_DY,"01-31 (based on month), 88, 99",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+898,Fetal Death,81,426,2,Date of First Prenatal Care Visit--Day,DOFP_DY,"01-31 (based on month), 88, 99",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,
 545,Natality,81,425,1,Father of Hispanic Origin?--Puerto Rican,FETHNIC2,"N = No, Not Puerto Rican
 H = Yes, Puerto Rican
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicPuertoRican].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetYesNoUnknownVitalRecords],B,,,,
@@ -1275,7 +1288,7 @@ U = Unknown",,,,,,,,,,,
 353,Surveillance,82,1076,30,Death Institution name,DINSTI,"Facility name literal; if Place of Death (DPLACE)=4 (decedent's home), enter ""Home""",I,VRDR,DeathLocation,name,string ,-,,,,,
 89,Mortality,82,571,3,Second Other Race Code,RACE23C,Appendix I,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[SecondOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityDecedent",codeable,[ValueSetRaceCodeVitalRecords],,,,,
 899,Fetal Death,82,428,4,Date of First Prenatal Care Visit--Year,DOFP_YR,"4 digit year; year of delivery or
-(year of delivery - 1), 8888, 9999",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+(year of delivery - 1), 8888, 9999",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,
 546,Natality,82,426,1,Father of Hispanic Origin?--Cuban,FETHNIC3,"N = No, Not Cuban
 H = Yes, Cuban
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicCuban].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetYesNoUnknownVitalRecords],B,,,,
@@ -1483,7 +1496,7 @@ at same facility",COMP_F1,"Y, N, U",,not implemented,not implemented,,,,,,,,
 (year of mother's birth + 10) through
 year of delivery, 8888, 9999",,not implemented,not implemented,,,,-,,,,
 920,Fetal Death,103,474,2,Number of Cigarettes Smoked in 3 months prior to Pregnancy,CIGPN,"00-98, 99",,BFDR,ObservationCigaretteSmokingBeforeDuringPregnancy,"value, <br />code=64794-1 (In the 3 months before you got pregnant, <br />how many cigarettes did you smoke on an average day)",integer,,B,,,,
-113,Mortality,103,704,1,Place of Injury (computer generated),INJPL,,,VRDR,PlaceOfInjury,value,codeable,[PlaceOfInjuryVS],,,,,
+113,Mortality,103,704,1,Place of Injury (computer generated),INJPL,,,VRDR,PlaceOfInjury,value,codeable,"A code from [PlaceOfInjuryVS] is required, an optional code from [PlaceOfInjuryOtherVS] can also be provided when the primary code is Other.",,,,,
 567,Natality,103,553,30,Father's Race--Second Other Asian Literal,FRACE19,Literal; blank,,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[OtherAsianLiteral2].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",string,,B,,,,
 1444,Birth Infant Death,103,553,30,Father's Race--Second Other Asian Literal,FRACE19,Literal; blank,,,,,,,,,,,
 1285,ITOP,103,900,1,"Hemorrhage
@@ -1652,6 +1665,7 @@ U = Unknown",,not implemented,not implemented,,,,-,,,,
 586,Natality,122,745,3,Father's Race Tabulation Variable 22C,FRACE22C,NCHS Appendix E,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,"component[FirstOtherRaceCode].value, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetRaceCodeVitalRecords],N,,,,
 1463,Birth Infant Death,122,745,3,Father's Race Tabulation Variable 22C,FRACE22C,NCHS Appendix E,,,,,,,,,,,
 134,Mortality,122,1037,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,DeathCertificate,extension[stateSpecificField],string(30),-,,y,,,
+134,Mortality,122,1037,30,State Specific Data ,STATESP,Possible use for future filler unless two neighboring states wish to use for some specific information that they both collect. This would be a non-standard field,,VRDR,CauseOfDeathCodedContentBundle,identifier.extension[stateSpecificField],string(30),-,,y,,,
 1304,ITOP,122,968,50,"Other complications literal 
 (at time of followup at other facility)",OTH_F2_LIT,Free form literal of specified other complication at time of followup at other facility.,,not implemented,not implemented,,,,,,,,
 939,Fetal Death,122,503,1,Infections Present--Syphilis(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),SYPH,"Y, N, U",,not implemented,not implemented,,,,-,,,,
@@ -1713,14 +1727,14 @@ U = Unknown",,BFDR,EncounterMaternity,"hospitalization.admitSource = ""hosp-tran
 1466,Birth Infant Death,125,752,1,Mother Transferred?,TRAN,"Y = Yes
 N = No
 U = Unknown",,,,,,,,,,,
-590,Natality,126,753,2,Date of First Prenatal Care Visit--Month,DOFP_MO,"01-12, 88=no care, 99=unknown",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+590,Natality,126,753,2,Date of First Prenatal Care Visit--Month,DOFP_MO,"01-12, 88=no care, 99=unknown",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,
 1467,Birth Infant Death,126,753,2,Date of First Prenatal Care Visit--Month,DOFP_MO,"01-12, 88=no care, 99=unknown",,,,,,,,,,,
 943,Fetal Death,126,507,1,Infections Present--Group B streptococcus(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),GBS,"Y, N, U",,not implemented,not implemented,,,,-,,,,
 138,Mortality,126,1075,1,Time of Injury Unit,TOI_UNIT,"A, P, M or Blank (AM, PM or Military)",,VRDR,InjuryIncident,effective,implicit,,,,,,
 397,Surveillance,126,2438,17,Place of injury. Latitude,LAT_I,"As coded by state of occurrence.  Commonly coded with space for a negative sign followed by 2 bytes, a decimal divider, and 6 decimal places (blank if natural death).",i,VRDR,InjuryLocation,position.latitude,float,-,,,,,
 1308,ITOP,126,1070,1,Secondary management -- resuction or other secondary procedure(s),RESUCT_MAN,"Y, N, U",,not implemented,not implemented,,,,,,,,
 944,Fetal Death,127,508,1,Infections Present--Cytomeglovirus(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),CMV,"Y, N, U",,not implemented,not implemented,,,,-,,,,
-591,Natality,127,755,2,Date of First Prenatal Care Visit--Day,DOFP_DY,"01-31 (based on month), 88=no care, 99=unknown",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+591,Natality,127,755,2,Date of First Prenatal Care Visit--Day,DOFP_DY,"01-31 (based on month), 88=no care, 99=unknown",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,
 1468,Birth Infant Death,127,755,2,Date of First Prenatal Care Visit--Day,DOFP_DY,"01-31 (based on month), 88=no care, 99=unknown",,,,,,,,,,,
 139,Mortality,127,1076,5,For possible future change in transax,BLANK1,Blank,,not implemented,not implemented,,,-,,,,,
 1309,ITOP,127,1071,50,Secondary management procedure(s) -- literal,OTHER_MAN_LIT,Free form literal of specified other secondary management procedure(s).,,not implemented,not implemented,,,,,,,,
@@ -1728,7 +1742,7 @@ U = Unknown",,,,,,,,,,,
 945,Fetal Death,128,509,1,Infections Present--Parvo virus(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),B19,"Y, N, U",,not implemented,not implemented,,,,-,,,,
 399,Surveillance,128,2456,120,Cause of Death Part I Line a (literal),COD1A,Literal information reported on Line a,,VRDR,CauseOfDeathPart1,"value.text,   component[lineNumber] = 1",string(120),-,,y,,,
 592,Natality,128,757,4,Date of First Prenatal Care Visit--Year,DOFP_YR,"4 digit year; year of child's birth or
-(year of child's birth - 1), 8888=no care, 9999=unknown ",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [PartialDatesAndTimes],B,,,,
+(year of child's birth - 1), 8888=no care, 9999=unknown ",,BFDR,ObservationDateOfFirstPrenatalCareVisit,value,dateTime,See [note on partial dates],B,,,,,
 1469,Birth Infant Death,128,757,4,Date of First Prenatal Care Visit--Year,DOFP_YR,"4 digit year; year of child's birth or
 (year of child's birth - 1), 8888=no care, 9999=unknown ",,,,,,,,,,,
 1310,ITOP,128,1121,1,Secondary management -- hospitalization,HOSP_MAN,"Y, N, U",,not implemented,not implemented,,,,,,,,
@@ -1781,7 +1795,7 @@ U = Unknown",,,,,,,,,,,
 2 = Forceps
 3 = Vacuum
 4 = Cesarean
-9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,[DeliveryRoutesVS],B,,,,
+9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,See  [note on missing method of delivery data],B,,,,
 406,Surveillance,135,,,Cause of Death Part I Line c (coded),*NO IJE MAPPING*,Coded Cause(s) of Death Associated with Text on  Line 1c,,VRDR,CauseOfDeathPart1,"value.coding,   component[lineNumber] = 3",codeable,[ICD10CausesOfDeathVS],,y,,,
 1317,ITOP,135,1128,1,Diagnostic Proc -- Cordocentesis,DIAG_CORD,"Y, N, U",,not implemented,not implemented,,,,,,,,
 599,Natality,135,773,2,Mother's Height--Inches,HIN,"00-11, 99",,BFDR,ObservationMotherHeight,value,quantity,,B,,,,
@@ -1890,7 +1904,7 @@ blank if not reported",I,VRDR,Decedent,extension[SpouseAlive] ,codeable, [Spouse
 609,Natality,145,791,2,Date of Last Live Birth--Month,MLLB,"01-12, 88, 99",,BFDR,ObservationDateOfLastLiveBirth,value,dateTime,See [PartialDatesAndTimes],B,,,,
 1486,Birth Infant Death,145,791,2,Date of Last Live Birth--Month,MLLB,"01-12, 88, 99",,,,,,,,,,,
 157,Mortality,145,1435,50,Husband's Surname/Wife's Maiden Last Name,SPOUSEL ,"Free form literal; if unknown, leave blank",I,VRDR,DecedentSpouse,"name.family, name.use = 'maiden",string,-,,,,,
-962,Fetal Death,145,529,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,BFDR,ObservationGestationalAgeAtDelivery,value,quantity,,B,,,,
+962,Fetal Death,145,529,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,BFDR,ObservationGestationalAgeAtDelivery,value,quantity,value is a decimal; unit is from [UnitsOfGestationalAgeVS],B,,,,,
 1327,ITOP,145,1187,1,Reason for Termination -- Fetal anomaly,REASON_FET_ANOM,"Y, N",,not implemented,not implemented,,,,,,,,
 416,Surveillance,145,3425,50,Spouse's Middle Name,SPOUSEMIDNAME,,i,VRDR,DecedentSpouse,"name.given , name.use = official",string,-,,,,,
 158,Mortality,146,1485,10,Decedent's Residence - Street number,STNUM_R,,,VRDR,Decedent,address.extension[stnum],string,-,,y,,,
@@ -2281,7 +2295,7 @@ IJE Natality Data Elements: INDL, AUGL, NVPR, STER, ANTB, CHOR, ESAN",Replace Ob
 2 = Forceps
 3 = Vacuum
 4 = Cesarean
-9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,[DeliveryRoutesVS],B,,,,
+9 = Unknown",,BFDR,ProcedureFinalRouteMethodDelivery,code,codeable,See  [note on missing method of delivery data],B,,,,
 1534,Birth Infant Death,193,857,1,Method of Delivery--Route and Method of Delivery,ROUT,"1 = Spontaneous
 2 = Forceps
 3 = Vacuum
@@ -2379,8 +2393,8 @@ For Canadian Provinces:
    SK  SASKATCHEWAN
    YT  YUKON",i,VRDR,DispositionLocation,address.state,string,[ValueSetStatesTerritoriesAndProvincesVitalRecords],,,,,
 1020,Fetal Death,203,1501,240,Other significant causes or conditions - Other obstetrical or pregnancy complications literal,COD18b10,Literal text or Blank,,BFDR,ConditionFetalDeathOtherCauseOrCondition,"code=FetalDeathCauseOrConditionCS#obstetricalcomplications, <br />code.text",string,code.text should contain description,B,,,,
-667,Natality,203,870,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,BFDR,ObservationGestationalAgeAtDelivery,value,quantity,,B,,,,
-1544,Birth Infant Death,203,870,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,,,,,,,,,,
+667,Natality,203,870,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,BFDR,ObservationGestationalAgeAtDelivery,value,quantity,value is a decimal; unit is from [UnitsOfGestationalAgeVS],B,,,,
+1544,Birth Infant Death,203,870,2,Obstetric Estimation of Gestation,OWGEST,"00-98, 99",,,,,,value is a decimal; unit is from [UnitsOfGestationalAgeVS],,,,,
 215,Mortality,203,3537,28,Disposition State or Territory - Literal,DISPSTATE,"Valid state, U.S. territory or Canadian province literal, otherwise blank",i,VRDR,DispositionLocation,address.state (expanded from 2 letter code),string,See [StateLiterals],,,,,
 1021,Fetal Death,204,1741,240,Other significant causes or conditions - Fetal anomaly literal,COD18b11,Literal text or Blank,,BFDR,ConditionFetalDeathOtherCauseOrCondition,"code=702709008 (Fetal Anomaly (Specify)), <br />code.text",string,code.text should contain description,B,,,,
 668,Natality,204,872,1,Obstetric Estimation of Gestation--Edit Flag,OWGEST_BYPASS,"0 = Off
@@ -3299,6 +3313,7 @@ Decision: Births should behave the same as deaths.",Needs work,FHIR-41387
 3,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,DeathCertificateDocument,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,
 4,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,CauseOfDeathCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,
 5,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,DemographicCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,
+6,Mortality,NA,NA,NA,Death Record Identifier,*NO IJE MAPPING*,"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,VRDR,IndustryOccupationCodedContentBundle,identifier.value,string(12),"YYYYJJNNNNNN,  YYYY = death year JJ = jurisdiction  and NNNNNN = certificate number",,,,,
 91,Mortality,NA,NA,NA,Race Recode 40  (No longer provided as of 2022),*NO IJE MAPPING*,,,VRCPL,ObservationCodedRaceAndEthnicityVitalRecords,component[ValueSetRaceRecode40VitalRecords].value,codeable,[ValueSetRaceRecode40VitalRecords],,,,,
 109,Mortality,NA,NA,NA,coder status ,"CS (TRX Field, no IJE Mapping)","Numeric, Valid codes: 0 -9 ",,VRDR,CodingStatusValues,parameter[coderStatus].value,integer,-,,,,,
 110,Mortality,NA,NA,NA,shipment number ,"SHIP (TRX Field, no IJE Mapping)",NCHS ID Information. Alpha\Numeric. Usually month of death or month of receipts,,VRDR,CodingStatusValues,parameter[shipmentNumber].value,string,-,,,,,
