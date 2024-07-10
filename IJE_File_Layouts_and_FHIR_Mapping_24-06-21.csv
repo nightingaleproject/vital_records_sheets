@@ -1295,7 +1295,7 @@ U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[Hisp
 H = Yes, other Hispanic
 U = Unknown",,,,,,,,,,,
 1266,ITOP,84,730,1,Contraceptive type - Other,CONTRA_OTH,"Y, N, U",,not implemented,not implemented,,,,,,,,
-92,Mortality,84,575,40,Occupation -- Literal ,OCCUP,,,VRCPL,DecedentUsualWork,value.text,string(40),-,,y,,,
+92,Mortality,84,575,40,Occupation -- Literal ,OCCUP,,,VRDR,DecedentUsualWork,value.text,string(40),-,,y,,,
 901,Fetal Death,84,434,2,Date of Last Prenatal Care Visit--Day(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),DOLP_DY,"01-31 (based on month), 88, 99",,not implemented,not implemented,,,,-,,,,
 548,Natality,84,428,20,Father of Hispanic Origin?--Other Literal,FETHNIC5,Literal; blank,,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicLiteral].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",string,,B,,,,
 1425,Birth Infant Death,84,428,20,Father of Hispanic Origin?--Other Literal,FETHNIC5,Literal; blank,,,,,,,,,,,
@@ -1309,7 +1309,7 @@ N = No, box for race not checked",,VRCPL,ObservationInputRaceAndEthnicityVitalRe
 1426,Birth Infant Death,85,448,1,Father's Race--White,FRACE1,"Y = Yes, box for race checked
 N = No, box for race not checked",,,,,,,,,,,
 356,Surveillance,85,1166,10,Place of death. Pre Directional,PREDIR_D,,I,VRDR,DeathLocation,address.extension[predir],string,-,,,,,
-94,Mortality,86,618,40,Industry -- Literal ,INDUST,,,VRCPL,DecedentUsualWork,"component [odh-UsualIndustry	].value.text",string(40),-,,y,,,
+94,Mortality,86,618,40,Industry -- Literal ,INDUST,,,VRDR,DecedentUsualWork,"component [odh-UsualIndustry	].value.text",string(40),-,,y,,,
 550,Natality,86,449,1,Father's Race--Black or African American,FRACE2,"Y, N",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[BlackOrAfricanAmerican].valueBoolean, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",boolean,,B,,,,
 1427,Birth Infant Death,86,449,1,Father's Race--Black or African American,FRACE2,"Y, N",,,,,,,,,,,
 903,Fetal Death,86,440,2,Total Number of Prenatal Care Visits(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),NPREV,"00-98, 99",,not implemented,not implemented,,,,-,,,,
@@ -1411,7 +1411,7 @@ For Canadian Provinces:
 1434,Birth Infant Death,93,456,1,Father's Race--Vietnamese,FRACE9,"Y, N",,,,,,,,,,,
 1275,ITOP,93,841,1,"Infection
 (at time of procedure)",INFECT_TP,"Y, N, U",,not implemented,not implemented,,,,,,,,
-102,Mortality,94,681,4,Occupation -- 4 digit Code ,OCCUPC4,4 digit code ,,VRCPL,DecedentUsualWork,valueCodeableConcept.coding[occupationCDCCensus2018] ,codeable,[PHVS_Occupation_CDC_Census2018VS],,,,,
+102,Mortality,94,681,4,Occupation -- 4 digit Code ,OCCUPC4,4 digit code ,,VRDR,DecedentUsualWork,valueCodeableConcept.coding[occupationCDCCensus2018] ,codeable,[PHVS_Occupation_CDC_Census2018VS],,,,,
 911,Fetal Death,94,454,1,Mother's Weight at Delivery--Edit Flag(NCHS DELETED THIS ITEM EFFECTIVE 2014/2015),DWGT_BYPASS,"0 = Edit Passed
 1 = Edit Failed, Verified
 2 = Edit Failed, not Verified",,not implemented,not implemented,,,,-,,,,
@@ -1420,7 +1420,7 @@ For Canadian Provinces:
 365,Surveillance,94,1344,17,Place of death. Longitude,LONG_D,"As coded by state of occurrence.  Commonly coded with space for a negative sign followed by 3 bytes, a decimal divider, and 6 decimal places.",I,VRDR,DeathLocation,position.longitude,float,-,,,,,
 1276,ITOP,94,842,1,"Uterine perforation
 (at time of procedure)",PERF_TP,"Y, N, U",,not implemented,not implemented,,,,,,,,
-103,Mortality,95,685,4,Industry -- 4 digit Code,INDUSTC4,4 digit code ,,VRCPL,DecedentUsualWork,component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018] ,codeable,[PHVS_Industry_CDC_Census2018VS],,,,,
+103,Mortality,95,685,4,Industry -- 4 digit Code,INDUSTC4,4 digit code ,,VRDR,DecedentUsualWork,component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCCensus2018] ,codeable,[PHVS_Industry_CDC_Census2018VS],,,,,
 559,Natality,95,458,1,Father's Race--Native Hawaiian,FRACE11,"Y, N",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[NativeHawaiian].valueBoolean, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",boolean,,B,,,,
 1436,Birth Infant Death,95,458,1,Father's Race--Native Hawaiian,FRACE11,"Y, N",,,,,,,,,,,
 1277,ITOP,95,843,1,"Cervical laceration
