@@ -508,7 +508,7 @@ Also removed for LB.",,
 8-051,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,38. Date of Injury,VRDR,vrdr-injury-incident,vrdr-injury-incident,effective,,,,,,InjuryIncident
 8-052,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,39. Time of Injury,VRDR,vrdr-injury-incident,vrdr-injury-incident,effective,,,,,,InjuryIncident
 8-053,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,40. Place of Injury,VRDR,vrdr-injury-incident,vrdr-injury-incident,component[placeOfInjury].value.text,,,,,,InjuryIncident
-8-054,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,41. Injury at Work?,VRDR,vrdr-injury-incident,vrdr-injury-incident,component[InjuryAtWork].value,,,,,,InjuryIncident
+8-054,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,41. Injury at Work?,VRDR,vrdr-injury-incident,vrdr-injury-incident,component[workInjuryIndicator].value,,,,,,InjuryIncident
 8-055,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,42. Location of Injury,VRDR,vrdr-injury-location,vrdr-injury-location,address,,,,,,InjuryLocation
 8-056,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,43. Describe How Injury Occurred,VRDR,vrdr-injury-incident,vrdr-injury-incident,value.text,,,,,,InjuryIncident
 8-057,U.S. Standard Certificate of Death,https://www.cdc.gov/nchs/data/dvs/DEATH11-03final-ACC.pdf,"44. If Transportation Injury, Specify",VRDR,vrdr-injury-incident,vrdr-injury-incident,component[transportationRole].value,,,,,,InjuryIncident
