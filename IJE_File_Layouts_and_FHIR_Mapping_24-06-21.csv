@@ -2801,6 +2801,7 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 734,Natality,270,1731,28,Mother's Residence County (Literal),COUNTYTXT,Valid county literal,,VRCPL,PatientMotherVitalRecords,address.district,string,,B,,,,,X
 1611,Birth Infant Death,270,1731,28,Mother's Residence County (Literal),COUNTYTXT,Valid county literal,,,,,,,,,,,,
 1087,Fetal Death,270,4086,3,Occupation of Mother (coded),MOM_OC_C,,,not implemented,not implemented,,,,-,,,,,
+1087,Fetal Death,,,,Occupation of Mother (coded)-- 2018 Standard Occupational Classification (SOC),*NO IJE MAPPING*,,,BFDR,ObservationPresentJob,"valueCodeableConcept.coding[occupationCDCSOC2018], <br />extension[roleMotherOrFather].value='MTH'",codeable,[PHVS_Occupation_CDC_SOC2018],,,,,,
 735,Natality,271,1759,28,Mother's Residence City/Town (Literal),CITYTEXT,Valid city/town/place literal,,VRCPL,PatientMotherVitalRecords,address.city,string,,B,,,,,X
 1612,Birth Infant Death,271,1759,28,Mother's Residence City/Town (Literal),CITYTEXT,Valid city/town/place literal,,,,,,,,,,,,
 1088,Fetal Death,271,4089,25,Occupation of Father,DAD_OC_T,Literal for father's current occupation,,ODH,ObservationPresentJob,"value.text, <br />extension[roleMotherOrFather].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
@@ -2808,6 +2809,7 @@ NCHS does not use
 BFDR defines ""ObservationPresentJob"" profile.
 BFDR and VRDR use different profiles",,FHIR-41389,
 1089,Fetal Death,272,4114,3,Occupation of Father (coded),DAD_OC_C,,,not implemented,not implemented,,,,-,,,,,
+1089,Fetal Death,,,,Occupation of Father (coded)-- 2018 Standard Occupational Classification (SOC),*NO IJE MAPPING*,,,BFDR,ObservationPresentJob,"valueCodeableConcept.coding[occupationCDCSOC2018], <br />extension[roleMotherOrFather].value='FTH'",codeable,[PHVS_Occupation_CDC_SOC2018],,,,,,
 736,Natality,272,1787,28,"State, U.S. Territory or Canadian Province of Residence (Mother) - literal",STATETXT,"Valid state, U.S. territory or Canadian province literal, otherwise blank",,VRCPL,PatientMotherVitalRecords,address.state (expanded from 2 letter code),string,See [StateLiterals],B,,,,,X
 1613,Birth Infant Death,272,1787,28,"State, U.S. Territory or Canadian Province of Residence (Mother) - literal",STATETXT,"Valid state, U.S. territory or Canadian province literal, otherwise blank",,,,,,,,,,,,
 737,Natality,273,1815,28,Mother's Residence Country (Literal),CNTRYTXT,Valid text for country of residence,,VRCPL,PatientMotherVitalRecords,address.country (expanded from 2 letter code),string,See [CountryLiterals],B,,,,,X
@@ -2816,6 +2818,8 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 738,Natality,274,1843,50,Father's First Name,DADFNAME,Free form literal,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.given, <br />name.use = official",string,,B,,,,,
 1615,Birth Infant Death,274,1843,50,Father's First Name,DADFNAME,Free form literal,,,,,,,,,,,,
 1091,Fetal Death,274,4142,3,Industry of Mother (coded),MOM_IN_C,,,not implemented,not implemented,,,,-,,,,,
+1091,Fetal Death,,,,Industry of Mother (coded)-- North American Industry Classification System (NAICS),*NO IJE MAPPING*,,, BFDR,ObservationPresentJob,"component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCNAICS2017], <br />extension[roleMotherOrFather].value='MTH'",codeable,[PHVS_Industry_CDC_NAICS2017],,,,,,
+1628,Birth Infant Death,287,2103,3,Industry of Mother (coded),MOM_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,
 1092,Fetal Death,275,4145,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationPresentJob,"component[odh-PastOrPresentIndustry].value.text, <br />extension[roleMotherOrFather].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
 BFDR defines ""ObservationPresentJob"" profile.
@@ -2823,6 +2827,7 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 739,Natality,275,1893,50,Father's Middle Name,DADMNAME,Free form literal,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.given, <br />name.use = official",string,,B,,,,,
 1616,Birth Infant Death,275,1893,50,Father's Middle Name,DADMNAME,Free form literal,,,,,,,,,,,,
 1093,Fetal Death,276,4170,3,Industry of Father (coded),DAD_IN_C,,,not implemented,not implemented,,,,-,,,,,
+1093,Fetal Death,,,,Industry of Father (coded)-- North American Industry Classification System (NAICS),*NO IJE MAPPING*,,, BFDR,ObservationPresentJob,"component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCNAICS2017], <br />extension[roleMotherOrFather].value='FTH'",codeable,[PHVS_Industry_CDC_NAICS2017],,,,,,
 740,Natality,276,1943,50,Father's Last Name,DADLNAME,Free form literal,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.family, <br />name.use = official",string,,B,,,,,
 1617,Birth Infant Death,276,1943,50,Father's Last Name,DADLNAME,Free form literal,,,,,,,,,,,,
 741,Natality,277,1993,7,Father's Surname Suffix,DADSUFFX,Valid suffix,,VRCPL,RelatedPersonFatherNaturalVitalRecords,"name.suffix, <br />name.use = official",string,,B,,,,,
@@ -2877,6 +2882,7 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 8 = Doctorate Degree or Professional Degree
 9 = Unknown",,VRCPL,ObservationEducationLevelVitalRecords,"value, <br />code=87300-0 (Highest level of education Father)",codeable,[ValueSetEducationLevelVitalRecords],B,,,,,
 747,Natality,283,2047,3,Occupation of Mother (coded),MOM_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,
+747,Natality,,,,Occupation of Mother (coded)-- 2018 Standard Occupational Classification (SOC),*NO IJE MAPPING*,,,BFDR,ObservationPresentJob,"valueCodeableConcept.coding[occupationCDCSOC2018], <br />extension[roleMotherOrFather].value='MTH'",codeable,[PHVS_Occupation_CDC_SOC2018],,,,,,
 1624,Birth Infant Death,283,2047,3,Occupation of Mother (coded),MOM_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,
 748,Natality,284,2050,25,Occupation of Father,DAD_OC_T,Literal for father's current occupation,,ODH,ObservationPresentJob,"value.text, <br />extension[roleMotherOrFather].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
@@ -2887,6 +2893,7 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 1 = Edit Failed, Data Queried and Verified
 2 = Edit Failed, Data Queried, but not Verified",,BFDR,ObservationEducationLevelVitalRecords,"value.extension[bypassEditFlag].value, <br />code=87300-0 (Highest level of education Father)",codeable,"[ValueSetEditBypass01234VitalRecords], <br />See [Handling of edit flags]",J,,,,,
 749,Natality,285,2075,3,Occupation of Father (coded),DAD_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,
+749,Natality,,,,Occupation of Father (coded)-- 2018 Standard Occupational Classification (SOC),*NO IJE MAPPING*,,,BFDR,ObservationPresentJob,"valueCodeableConcept.coding[occupationCDCSOC2018], <br />extension[roleMotherOrFather].value='FTH'",codeable,[PHVS_Occupation_CDC_SOC2018],,,,,,
 1626,Birth Infant Death,285,2075,3,Occupation of Father (coded),DAD_OC_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,
 1102,Fetal Death,285,4291,1,Father of Hispanic Origin?--Mexican,FETHNIC1,"N = No, Not Mexican
 H = Yes, Mexican
@@ -2900,6 +2907,7 @@ U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[Hisp
 H = Yes, Cuban
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicCuban].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetYesNoUnknownVitalRecords],B,,,,,
 751,Natality,287,2103,3,Industry of Mother (coded),MOM_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,
+751,Natality,,,,Industry of Mother (coded)-- North American Industry Classification System (NAICS),*NO IJE MAPPING*,,, BFDR,ObservationPresentJob,"component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCNAICS2017], <br />extension[roleMotherOrFather].value='MTH'",codeable,[PHVS_Industry_CDC_NAICS2017],,,,,,
 1628,Birth Infant Death,287,2103,3,Industry of Mother (coded),MOM_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,
 752,Natality,288,2106,25,Industry of Father,DAD_IN_T,Literal for father's corresponding industry,,ODH,ObservationPresentJob,"component[odh-PastOrPresentIndustry].value.text, <br />extension[roleMotherOrFather].value='FTH'",string(25),,B,,"Code used on 3 tabs: N, FD, & BID
 NCHS does not use
@@ -2910,6 +2918,7 @@ BFDR and VRDR use different profiles",,FHIR-41389,
 H = Yes, other Hispanic
 U = Unknown",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicOther].valueCoding, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",codeable,[ValueSetYesNoUnknownVitalRecords],B,,,,,
 753,Natality,289,2131,3,Industry of Father (coded),DAD_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,not implemented,not implemented,,,,-,,,,,
+753,Natality,,,,Industry of Father (coded)-- North American Industry Classification System (NAICS),*NO IJE MAPPING*,,, BFDR,ObservationPresentJob,"component[odh-UsualIndustry].valueCodeableConcept.coding[industryCDCNAICS2017], <br />extension[roleMotherOrFather].value='FTH'",codeable,[PHVS_Industry_CDC_NAICS2017],,,,,,
 1630,Birth Infant Death,289,2131,3,Industry of Father (coded),DAD_IN_C,"Refer to NCHS Instruction Manual Part 19, Industry and Occupation Coding for Death Certificates, 2003. Leave blank if using a coding system other than this",,,,,,,,,,,,
 1106,Fetal Death,289,4295,20,Father of Hispanic Origin?--Other Literal,FETHNIC5,"Literal text, or Blank",,VRCPL,ObservationInputRaceAndEthnicityVitalRecords,"component[HispanicLiteral].valueString, <br />code=CodeSystemLocalObservationsCodesVitalRecords#inputraceandethnicityFather",string,,B,,,,,
 754,Natality,290,2134,2,"State, U.S. Territory or Canadian Province of Birth (Father) - code",FBPLACD_ST_TER_C,"NCHS Instruction Manual: Part 8
